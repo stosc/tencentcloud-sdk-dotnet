@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <RootNamespace>TencentCloud</RootNamespace>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <VersionPrefix>3.0.1</VersionPrefix>
@@ -11,9 +11,13 @@
     <Company>Tencent Ltd.</Company>
     <Product />
     <PackageId>TencentCloudSDK</PackageId>
-    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/stosc/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <Version>3.0.1.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>3.0.1.2</AssemblyVersion>
+    <FileVersion>3.0.1.2</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>Full</DebugType>
@@ -36,6 +40,8 @@
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cmq\V20180920\CmqClient.cs" />
+    <Compile Include="Cmq\V20180920\Models\CreateTopicRequest.cs" />
     <Compile Include="Common\AbstractClient.cs" />
     <Compile Include="Common\AbstractModel.cs" />
     <Compile Include="Common\Credential.cs" />
